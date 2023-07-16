@@ -25,7 +25,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin-alt")
 const typescriptFormatter = require("react-dev-utils/typescriptFormatter");
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
-const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== "false";
+const shouldUseSourceMap = false;
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== "false";
@@ -424,7 +424,7 @@ module.exports = function(webpackEnv) {
             {
               loader: require.resolve("raw-loader"),
               test: /\.md/i,
-              include: path.resolve('./src/template')
+              include: path.resolve("./src/template"),
             },
           ],
         },
@@ -514,8 +514,8 @@ module.exports = function(webpackEnv) {
           clientsClaim: true,
           skipWaiting: true,
           exclude: [/\.map$/, /asset-manifest\.json$/],
-          importWorkboxFrom: 'local',
-          navigateFallback: publicUrl + '/index.html',
+          importWorkboxFrom: "local",
+          navigateFallback: publicUrl + "/index.html",
           navigateFallbackBlacklist: [
             // Exclude URLs starting with /_, as they're likely an API call
             new RegExp("^/_"),
@@ -547,7 +547,7 @@ module.exports = function(webpackEnv) {
               urlPattern: /.*\.(png|jpg|jpeg|svg|gif)/,
               handler: "cacheFirst", // 缓存优先
               options: {
-                cacheName: 'images',
+                cacheName: "images",
                 expiration: {
                   maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
                   maxEntries: 50, // 最大缓存图片数量
