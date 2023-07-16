@@ -92,9 +92,8 @@ class Lib extends Component {
         ) : (
           <Result
             icon={<SvgIcon name="smile" style={style.svgIcon} />}
-            title="请使用 PC 端打开排版工具"
-            subTitle="更多 Markdown Nice 信息，请扫码关注公众号「编程如画」"
-            extra={<img alt="" style={{width: "100%"}} src="https://my-wechat.mdnice.com/wechat.jpg" />}
+            title="请使用电脑💻设备打开"
+            subTitle="公众号 & Markdown 排版：支持自定义样式的 Markdown 在线编辑器；致力于微信公众号、知乎、稀土掘金等平台发文更容易。"
           />
         )}
       </Provider>
