@@ -21,14 +21,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-.nice-btn-group-margin {
-  margin-right: 10px;
-}
-
-.nice-btn-group-right {
   margin-right: 20px;
+}
+
+.nice-link {
+  margin-right: 10px;
 }
 
 .nice-icon-bar {

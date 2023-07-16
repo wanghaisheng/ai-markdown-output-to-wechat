@@ -15,7 +15,7 @@ ReactDOM.render(
       isGiteeOpen: true,
       isGitHubOpen: true,
     }}
-    defaultTitle="Markdown Nice"
+    defaultTitle="公众号 Markdown 排版"
   />,
   document.getElementById("root"),
 );

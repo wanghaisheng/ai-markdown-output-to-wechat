@@ -40,7 +40,17 @@ class Navbar extends Component {
           <Setting />
           <Tutorial />
         </div>
-        <div className="nice-right-nav" />
+        <div className="nice-right-nav">
+          <a className="nice-title nice-link" href="https://www.jeffjade.com/nicelinks/?ref=wechat.jeffjade.com">
+            晚晴幽草轩
+          </a>
+          <a className="nice-title nice-link" href="https://nicelinks.site?ref=wechat.jeffjade.com">
+            倾城之链
+          </a>
+          <a className="nice-title nice-link" href="https://chatgpt.nicelinks.site/?ref=wechat.jeffjade.com">
+            素问智聊斋
+          </a>
+        </div>
       </div>
     );
   }
