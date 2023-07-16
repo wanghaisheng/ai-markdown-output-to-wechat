@@ -1,33 +1,20 @@
 <div align="center">
-<a href="https://mdnice.com">
-<img width="500" src="https://files.mdnice.com/logo.svg"/>
-</a>
+  <a href="https://wechat.jeffjade.com/">
+    <img width="360" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg"/>
+  </a>
 </div>
-<h1 align="center">Markdown Nice</h1>
 
-## 简介
+<h1 align="center"><a href="https://wechat.jeffjade.com/?github.com">公众号 Markdown 排版</a></h1>
 
-- 支持自定义样式的 Markdown 编辑器
-- 支持微信公众号、知乎和稀土掘金
-- 欢迎[在线使用](https://mdnice.com/)
-- 有疑问请参考 [如何有效的解决 mdnice 相关问题？](https://github.com/mdnice/markdown-nice/issues/163)
+## 服务简介
 
-## 主题
-
-[Markdown Nice 主题列表](https://product.mdnice.com/themes/)
-
-> 欢迎提交主题，提供更多文章示例~~
-
-## 关于
-
-`mdnice`组建了**推文群**，欢迎反馈意见和公众号大佬们一起交流，关注公众号回复「排版」拉你入群。
-
-| 入群码                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| <img width="360px" src="https://files.mdnice.com/pic/cd3ca20c-896f-4cfc-9bdd-c4c58e69ba26.jpg"/> |
+- 支持自定义样式的 Markdown 编辑器；
+- 支持微信公众号、知乎、稀土掘金平台；
+- Fork 自 [markdown-nice](https://github.com/mdnice/markdown-nice)，支持[在线使用](https://wechat.jeffjade.com/)；
 
 ## 友情链接
 
-- [BlogHelper](https://github.com/ystcode/BlogHelper)：一键发布本地文章到主流博客平台的托盘助手
-- [qrbtf](https://github.com/ciaochaos/qrbtf)：艺术二维码生成器
-- [编程如画](https://draw.mdnice.com/)：「编程如画」博客
+- [倾城之链](https://nicelinks.site/?ref=wechat.jeffjade.com) ：开放型新一代导航平台，旨在云集全球优秀网站，探索互联网中更广阔的世界；在「倾城之链」，您可以轻松发现、学习、分享更多有用或有趣的事物。
+- [曼妙句子](https://read.lovejade.cn/?ref=wechat.jeffjade.com) ：人生最曼妙的风景，是内心的淡定与从容。曼妙句子，旨在云集世间摇曳生姿的文字，或情感、或唯美、或修身、或励志、或哲学、或娱乐，拳拳真情，精心择选，总有荡漾你心的那一言。
+- [**玉桃文飨轩**](https://share.lovejade.cn/?ref=wechat.jeffjade.com) ：简单好用的在线文本工具；支持将 Markdown、rich text、word 等格式内容，快速转化为 png、pdf、html、PPT 等文件，并支持一键下载、社交分享、自定义设置等功能。
+- [**素问智聊斋**](https://chatgpt.nicelinks.site/) ：非官方 ChatGPT 在线客户端，旨在提供更便捷的 ChatGPT 访问体验；它基于非官方 ChatGPT API、Svelte、TailwindCSS、Vite 和 NodeJS 所搭建；无需账号，零配置，即可与 ChatGPT 畅聊；支持自定义 OPENAI API KEY。
