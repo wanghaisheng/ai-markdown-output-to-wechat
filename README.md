@@ -1,10 +1,10 @@
 <div align="center">
   <a href="https://wechat.jeffjade.com/">
-    <img width="360" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg"/>
+    <img width="360" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg" alt="公众号 & Markdown 排版" />
   </a>
 </div>
 
-<h1 align="center"><a href="https://wechat.jeffjade.com/?github.com">公众号 Markdown 排版</a></h1>
+<h1 align="center"><a href="https://wechat.jeffjade.com/?github.com">公众号 & Markdown 排版</a></h1>
 
 ## 服务简介
 
