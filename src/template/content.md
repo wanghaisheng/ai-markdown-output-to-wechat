@@ -1,24 +1,24 @@
-![](https://my-wechat.mdnice.com/logo.svg)
+![公众号 & Markdown 排版](https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg)
 
-请使用 **Chrome** 浏览器。
+请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览（请使用 **Chrome**、Arc 等现代浏览器）。
 
-请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。
+## 公众号 & Markdown 排版
 
-## 1 Markdown Nice 简介
+- 支持自定义样式的 Markdown 编辑器；
+- 支持微信公众号、知乎和稀土掘金；
+- 欢迎扫码回复「排版」加入用户群；
 
-- 支持自定义样式的 Markdown 编辑器
-- 支持微信公众号、知乎和稀土掘金
-- 欢迎扫码回复「排版」加入用户群
+![公众号 & Markdown 排版](https://oss.nicelinks.site/nicelinks-wechat-code.png)
 
-![](https://my-wechat.mdnice.com/wechat.jpg)
+## Markdown 简介
 
-## 2 主题
+[Markdown](https://nicelinks.site/tags/Markdown) 是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与 HTML 混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown 被大量使用，如 Github、ChatGPT、Wikipedia、 [倾城之链](https://nicelinks.site) 等。
 
-**https://preview.mdnice.com/themes/**
+在线体验一下 [Markdown 在线编辑器](https://markdown.lovejade.cn/) 。
 
-欢迎提交主题，提供更多文章示例~~
+千万不要被「标记」、「语言」吓到，Markdown 的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。
 
-## 3 通用语法
+就是这十个不到的标记符号，却能让人**优雅地沉浸式记录，专注内容而不是纠结排版**，达到「心中无尘，码字入神」的境界。
 
 ### 3.1 标题
 
@@ -88,34 +88,34 @@ _这个是斜体_
 一级引用如下：
 
 > ### 一级引用示例
-> 
+>
 > 读一本好书，就是在和高尚的人谈话。 **——歌德**
-> 
-> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
-> 
-> ![这里写图片描述](https://my-wechat.mdnice.com/wechat.jpg)
+>
+> [Markdown Nice 最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+>
+> ![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
 
 当使用多个 `>` 符号时，就会变成多级引用
 
 二级引用如下：
 
->> ### 二级引用示例
->>
->> 读一本好书，就是在和高尚的人谈话。 **——歌德**
->>
->> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
->> 
->> ![这里写图片描述](https://my-wechat.mdnice.com/wechat.jpg)
+> > ### 二级引用示例
+> >
+> > 读一本好书，就是在和高尚的人谈话。 **——歌德**
+> >
+> > [Markdown Nice 最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+> >
+> > ![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
 
 三级引用如下：
 
->>> ### 三级引用示例
->>>
->>> 读一本好书，就是在和高尚的人谈话。 **——歌德**
->>>
->>> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
->>> 
->>> ![这里写图片描述](https://my-wechat.mdnice.com/wechat.jpg)
+> > > ### 三级引用示例
+> > >
+> > > 读一本好书，就是在和高尚的人谈话。 **——歌德**
+> > >
+> > > [Markdown Nice 最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+> > >
+> > > ![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
 
 ### 3.7 分割线
 
@@ -151,7 +151,7 @@ _这个是斜体_
 
 插入图片，如果是行内图片则无图例，否则有图例，格式如下：
 
-![这里写图片描述](https://my-wechat.mdnice.com/wechat.jpg)
+![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
 
 可以通过在图片尾部添加宽度和高度控制图片大小，用法如下：
 
@@ -163,7 +163,7 @@ _这个是斜体_
 
 支持 jpg、png、gif、svg 等图片格式，**其中 svg 文件仅可在微信公众平台中使用**，svg 文件示例如下：
 
-![](https://my-wechat.mdnice.com/i-am-svg.svg)
+![公众号 & Markdown 排版](https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg)
 
 - 支持图片**拖拽和截图粘贴**到编辑器中上传，上传时使用当前选择的图床。
 - 可使用**格式->图片**上传本地图片，网站目前支持「图壳」图床，失败率低，但是只可保存一天用于排版
@@ -321,4 +321,24 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 ### 5.3 更多文档
 
-更多文档请参考 [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")
+更多文档请参考 [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")![公众号 & Markdown 排版](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+
+请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览（请使用 **Chrome**、Arc 等现代浏览器）。
+
+## 公众号 & Markdown 排版
+
+- 支持自定义样式的 Markdown 编辑器；
+- 支持微信公众号、知乎和稀土掘金；
+- 欢迎扫码回复「排版」加入用户群；
+
+![公众号 & Markdown 排版](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+
+## Markdown 简介
+
+[Markdown](https://nicelinks.site/tags/Markdown) 是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与 HTML 混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown 被大量使用，如 Github、ChatGPT、Wikipedia、 [倾城之链](https://nicelinks.site) 等。
+
+在线体验一下 [Markdown 在线编辑器](https://markdown.lovejade.cn/) 。
+
+千万不要被「标记」、「语言」吓到，Markdown 的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。
+
+就是这十个不到的标记符号，却能让人**优雅地沉浸式记录，专注内容而不是纠结排版**，达到「心中无尘，码字入神」的境界。

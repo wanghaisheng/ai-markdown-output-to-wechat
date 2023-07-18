@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import ImageDialog from "../component/Dialog/ImageDialog";
 import LinkDialog from "../component/Dialog/LinkDialog";
 import FormDialog from "../component/Dialog/FormDialog";
-import HistoryDialog from "../component/Dialog/HistoryDialog";
 import SitDownDialog from "../component/Dialog/SitDownDialog";
 import TutorialDialog from "../component/Dialog/TutorialDialog";
 
@@ -13,7 +12,6 @@ class Dialog extends Component {
         <ImageDialog />
         <LinkDialog />
         <FormDialog />
-        <HistoryDialog />
         <SitDownDialog />
         <TutorialDialog />
       </div>

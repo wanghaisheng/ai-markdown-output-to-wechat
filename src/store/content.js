@@ -50,7 +50,7 @@ class Content {
 const store = new Content();
 
 // 如果为空先把数据放进去
-if (window.localStorage.getItem(CONTENT) === null) {
+if (!window.localStorage.getItem(CONTENT)) {
   window.localStorage.setItem(CONTENT, TEMPLATE.content);
 }
 if (!window.localStorage.getItem(STYLE)) {

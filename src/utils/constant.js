@@ -214,7 +214,7 @@ export const TUTORIALS = [
   {
     title: "第10关：图片",
     content: `
-![这里写图片描述](https://my-wechat.mdnice.com/wechat.jpg)
+![这里写图片描述](https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg)
 
 ![同时设置宽度和高度](https://my-wechat.mdnice.com/logo.png =150x150)
     
