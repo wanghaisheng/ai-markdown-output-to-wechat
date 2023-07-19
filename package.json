@@ -2,7 +2,7 @@
   "name": "markdown-nice",
   "author": "mdnice",
   "description": "公众号 & Markdown 排版：支持自定义样式的 Markdown 在线编辑器；致力于微信公众号、知乎、稀土掘金等平台发文更容易。",
-  "version": "1.9.0",
+  "version": "1.9.5",
   "private": false,
   "main": "lib/Lib.js",
   "module": "lib/Lib.js",

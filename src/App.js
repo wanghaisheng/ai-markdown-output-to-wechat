@@ -14,6 +14,8 @@ import Sidebar from "./layout/Sidebar";
 import StyleEditor from "./layout/StyleEditor";
 import EditorMenu from "./layout/EditorMenu";
 import SearchBox from "./component/SearchBox";
+import TEMPLATE from "./template/index";
+import {version} from "../package.json";
 
 import "./App.css";
 import "./utils/mdMirror.css";
@@ -35,6 +37,8 @@ import appContext from "./utils/appContext";
 import {uploadAdaptor} from "./utils/imageHosting";
 import bindHotkeys, {betterTab, rightClick} from "./utils/hotkey";
 import {message} from "antd";
+
+console.log(`「公众号 & Markdown 排版」当前版本为：`, version);
 
 @inject("content")
 @inject("navbar")
@@ -153,10 +157,8 @@ class App extends Component {
   };
 
   setEditorContent = () => {
-    const {defaultText} = this.props;
-    if (defaultText) {
-      this.props.content.setContent(defaultText);
-    }
+    const content = window.localStorage.getItem("editor-content") || TEMPLATE.content;
+    this.props.content.setContent(content);
   };
 
   setCurrentIndex(index) {
@@ -377,7 +379,7 @@ class App extends Component {
                   <section
                     id={LAYOUT_ID}
                     data-tool="mdnice编辑器"
-                    data-website="https://www.mdnice.com"
+                    data-website="https://wechat.jeffjade.com/"
                     dangerouslySetInnerHTML={{
                       __html: parseHtml,
                     }}
