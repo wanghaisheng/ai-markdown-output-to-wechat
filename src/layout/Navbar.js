@@ -39,14 +39,29 @@ class Navbar extends Component {
           <Setting />
         </div>
         <div className="nice-right-nav">
-          <a className="nice-title nice-link" href="https://www.jeffjade.com/nicelinks/?ref=wechat.jeffjade.com">
+          <a
+            className="nice-title nice-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://niceshare.site/?ref=wechat.jeffjade.com"
+          >
+            逍遥自在轩
+          </a>
+          <a
+            className="nice-title nice-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.jeffjade.com/nicelinks/?ref=wechat.jeffjade.com"
+          >
             晚晴幽草轩
           </a>
-          <a className="nice-title nice-link" href="https://nicelinks.site?ref=wechat.jeffjade.com">
-            倾城之链
-          </a>
-          <a className="nice-title nice-link" href="https://chatgpt.nicelinks.site/?ref=wechat.jeffjade.com">
-            素问智聊斋
+          <a
+            className="nice-title nice-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://quickapp.lovejade.cn/?ref=wechat.jeffjade.com"
+          >
+            静轩之别苑
           </a>
         </div>
       </div>
