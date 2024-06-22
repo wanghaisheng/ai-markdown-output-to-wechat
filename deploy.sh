@@ -18,9 +18,5 @@ git init
 git add -A
 git commit -m 'deploy update 🎉'
 
-# 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:nicejade/markdown-nice.git master:gh-pages
+git push -f git@github.com:nicejade/markdown-nice.git main:gh-pages
 cd -
