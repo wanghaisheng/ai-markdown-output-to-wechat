@@ -59,9 +59,9 @@ class Navbar extends Component {
             className="nice-title nice-link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://quickapp.lovejade.cn/?ref=wechat.jeffjade.com"
+            href="https://www.thebettersites.com/?ref=wechat.jeffjade.com"
           >
-            静轩之别苑
+            清风明月轩
           </a>
         </div>
       </div>

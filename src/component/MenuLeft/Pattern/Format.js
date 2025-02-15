@@ -19,9 +19,9 @@ class Format extends Component {
       <div id="nice-menu-format" className="nice-menu-item" onClick={this.handleFormat}>
         <span>
           <span className="nice-menu-flag" />
-          <span className="nice-menu-name">格式化文档</span>
+          <strong className="nice-menu-name important-mark">格式化文档</strong>
         </span>
-        <span className="nice-menu-shortcut">{hotKeys.format}</span>
+        <span className="nice-menu-shortcut important-mark">{hotKeys.format}</span>
       </div>
     );
   }
