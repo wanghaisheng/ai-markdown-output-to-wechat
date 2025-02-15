@@ -8,7 +8,7 @@
 - 支持微信公众号、知乎和稀土掘金；
 - 欢迎扫码回复「排版」加入用户群；
 
-![公众号 & Markdown 排版](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+![公众号 & Markdown 排版](https://share.lovejade.cn/screenshots/desktop.png)
 
 ## Markdown 简介
 
@@ -93,7 +93,7 @@ _这个是斜体_
 >
 > [Markdown Nice 最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
 >
-> ![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+> ![这里写图片描述](https://share.lovejade.cn/screenshots/desktop.png)
 
 当使用多个 `>` 符号时，就会变成多级引用
 
@@ -105,7 +105,7 @@ _这个是斜体_
 > >
 > > [Markdown Nice 最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
 > >
-> > ![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+> > ![这里写图片描述](https://share.lovejade.cn/screenshots/desktop.png)
 
 三级引用如下：
 
@@ -115,7 +115,7 @@ _这个是斜体_
 > > >
 > > > [Markdown Nice 最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
 > > >
-> > > ![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+> > > ![这里写图片描述](https://share.lovejade.cn/screenshots/desktop.png)
 
 ### 3.7 分割线
 
@@ -151,13 +151,13 @@ _这个是斜体_
 
 插入图片，如果是行内图片则无图例，否则有图例，格式如下：
 
-![这里写图片描述](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+![这里写图片描述](https://share.lovejade.cn/screenshots/desktop.png)
 
 可以通过在图片尾部添加宽度和高度控制图片大小，用法如下：
 
-![同时设置宽度和高度](https://oss.nicelinks.site/nicelinks-wechat-code.png =150x150)
+![同时设置宽度和高度](https://share.lovejade.cn/screenshots/desktop.png =150x150)
 
-![只设置宽度，推荐使用百分比](https://oss.nicelinks.site/nicelinks-wechat-code.png =40%x)
+![只设置宽度，推荐使用百分比](https://share.lovejade.cn/screenshots/desktop.png =40%x)
 
 该语法比较特殊，其他 Markdown 编辑器不完全通用。
 
@@ -321,4 +321,4 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 ### 5.3 更多文档
 
-更多文档请参考 [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")![公众号 & Markdown 排版](https://oss.nicelinks.site/nicelinks-wechat-code.png)
+更多文档请参考 [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")![公众号 & Markdown 排版](https://share.lovejade.cn/screenshots/desktop.png)
