@@ -95,7 +95,7 @@ export const addJuejinSuffix = () => {
   const suffix = document.createElement("p");
   suffix.id = "nice-suffix-juejin-container";
   suffix.className = "nice-suffix-juejin-container";
-  suffix.innerHTML = `本文使用 <a href="https://wechat.jeffjade.com/">「公众号 & Markdown 排版」</a> 排版`;
+  suffix.innerHTML = `本文使用 <a href="https://wechat.jeffjade.com/">「Markdown 在线编辑器 | 公众号内容排版工具」</a> 排版`;
 
   const element = document.getElementById(LAYOUT_ID);
   element.appendChild(suffix);

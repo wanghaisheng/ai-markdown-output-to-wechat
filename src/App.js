@@ -38,7 +38,7 @@ import {uploadAdaptor} from "./utils/imageHosting";
 import bindHotkeys, {betterTab, rightClick} from "./utils/hotkey";
 import {message} from "antd";
 
-console.log(`「公众号 & Markdown 排版」当前版本为：`, version);
+console.log(`「Markdown 在线编辑器 | 公众号内容排版工具」当前版本为：`, version);
 
 @inject("content")
 @inject("navbar")
