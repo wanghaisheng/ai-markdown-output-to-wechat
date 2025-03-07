@@ -1,3 +1,6 @@
+// ... 其他常量 ...
+
+export const IS_MOBILE_PREVIEW_MODE = "IS_MOBILE_PREVIEW_MODE";
 export const CLIENT_ID = process.env.NODE_ENV === "development" ? "e791aa2a7a64b3f766a2" : "b3a3c46bd66318367efa";
 export const CLIENT_SECRET =
   process.env.NODE_ENV === "development"

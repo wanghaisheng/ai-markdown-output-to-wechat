@@ -174,7 +174,31 @@ export const betterTab = (cm) => {
   }
 };
 
+// 添加清空内容的函数
+export const clearContent = (content) => {
+  if (window.confirm("确定要清空所有内容吗？")) {
+    content.setContent("");
+  }
+};
+
+// 右键菜单函数
 export const rightClick = (cm) => {
+  const {content} = window.store;
+  const {dialog} = window.store;
+
+  // 创建菜单元素
+  const menuContainer = document.createElement("div");
+  menuContainer.className = "nice-right-menu";
+
+  // 添加清空内容选项
+  const clearItem = document.createElement("div");
+  clearItem.innerText = "清空内容";
+  clearItem.className = "nice-right-menu-item";
+  clearItem.onclick = () => {
+    clearContent(content);
+    hideMenu();
+  };
+
   const ele = document.getElementById("nice-md-editor");
   ele.oncontextmenu = (e) => {
     const element = document.getElementById("nice-editor-menu");

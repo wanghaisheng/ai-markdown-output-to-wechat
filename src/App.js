@@ -10,7 +10,7 @@ import "antd/dist/antd.css";
 import {observer, inject} from "mobx-react";
 import classnames from "classnames";
 import throttle from "lodash.throttle";
-
+import MobileNavbar from "./component/MobileNavbar";
 import Dialog from "./layout/Dialog";
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
@@ -40,6 +40,7 @@ import pluginCenter from "./utils/pluginCenter";
 import appContext from "./utils/appContext";
 import {uploadAdaptor} from "./utils/imageHosting";
 import bindHotkeys, {betterTab, rightClick} from "./utils/hotkey";
+// 在顶部导入部分添加
 import {message} from "antd";
 
 console.log(`「Markdown 在线编辑器 | 公众号内容排版工具」当前版本为：`, version);
@@ -304,15 +305,23 @@ class App extends Component {
     math.typesetRoot.setAttribute(MJX_DATA_FORMULA_TYPE, cls);
     math.typesetRoot = doc.adaptor.node(tag, {class: spanClass, style: "cursor:pointer"}, [math.typesetRoot]);
   }
+
   render() {
     const {previewType} = this.props.navbar;
-    const {isEditAreaOpen, isPreviewAreaOpen, isStyleEditorOpen, isImmersiveEditing} = this.props.view;
+    const {
+      isEditAreaOpen,
+      isPreviewAreaOpen,
+      isStyleEditorOpen,
+      isImmersiveEditing,
+      isMobileDevice,
+      isMobilePreviewMode,
+    } = this.props.view;
     const {isSearchOpen} = this.props.dialog;
-    const {isMobileDevice} = this.props.view;
     const parseHtml = markdownParser.render(this.props.content.content);
-    // Consolidated class declarations
+
+    // 恢复原始类名逻辑，同时保留移动端改进
     const containerClasses = {
-      app: classnames({
+      app: classnames("nice-app", {
         "nice-mobile-container": isMobileDevice,
       }),
       textContainer: classnames({
@@ -323,30 +332,34 @@ class App extends Component {
       mdEditing: classnames({
         "nice-md-editing": !isImmersiveEditing,
         "nice-md-editing-immersive": isImmersiveEditing,
-        "nice-md-editing-hide": !isEditAreaOpen,
-      }),
-      styleEditing: classnames({
-        "nice-style-editing": true,
-        "nice-style-editing-hide": isImmersiveEditing,
+        "nice-md-editing-hide": !isEditAreaOpen || (isMobileDevice && isMobilePreviewMode),
+        "nice-md-editing-mobile": isMobileDevice,
       }),
       richText: classnames({
         "nice-marked-text": true,
         "nice-marked-text-pc": previewType === "pc",
-        "nice-marked-text-hide": isImmersiveEditing || !isPreviewAreaOpen,
+        "nice-marked-text-hide": isImmersiveEditing || !isPreviewAreaOpen || (isMobileDevice && !isMobilePreviewMode),
+        "nice-preview-mobile": isMobileDevice,
       }),
       richTextBox: classnames({
         "nice-wx-box": true,
         "nice-wx-box-pc": previewType === "pc",
+        "nice-wx-box-mobile": isMobileDevice,
       }),
     };
 
     return (
       <appContext.Consumer>
         {({defaultTitle, onStyleChange, onStyleBlur, onStyleFocus, token}) => (
-          <div className="nice-app">
-            <Navbar title={defaultTitle} token={token} />
+          <div className={containerClasses.app}>
+            {/* 只在非移动设备上显示顶部导航栏 */}
+            {!isMobileDevice && <Navbar title={defaultTitle} token={token} />}
             <div className={containerClasses.textContainer}>
-              <div id="nice-md-editor" className={containerClasses.mdEditing} onMouseOver={(e) => this.setCurrentIndex(1, e)}>
+              <div
+                id="nice-md-editor"
+                className={containerClasses.mdEditing}
+                onMouseOver={(e) => this.setCurrentIndex(1, e)}
+              >
                 {isSearchOpen && <SearchBox />}
                 <CodeMirror
                   value={this.props.content.content}
@@ -371,7 +384,11 @@ class App extends Component {
                   ref={this.getInstance}
                 />
               </div>
-              <div id="nice-rich-text" className={containerClasses.richText} onMouseOver={(e) => this.setCurrentIndex(2, e)}>
+              <div
+                id="nice-rich-text"
+                className={containerClasses.richText}
+                onMouseOver={(e) => this.setCurrentIndex(2, e)}
+              >
                 <Sidebar />
                 <div
                   id={BOX_ID}
@@ -404,12 +421,12 @@ class App extends Component {
               <Dialog />
               <EditorMenu />
             </div>
-            <Footer />
+            {/* 在移动设备上显示底部导航栏，在非移动设备上显示底部栏 */}
+            {isMobileDevice ? <MobileNavbar /> : <Footer />}
           </div>
         )}
       </appContext.Consumer>
     );
   }
 }
-
 export default App;
