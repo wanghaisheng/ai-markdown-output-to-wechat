@@ -1,0 +1,39 @@
+.nice-mobile-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nice-mobile-navbar-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 56px;
+  padding: 0 8px;
+}
+
+.nice-mobile-navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.nice-mobile-navbar-icon {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.nice-mobile-navbar-item.active {
+  color: #1890ff;
+}
+
+.nice-mobile-navbar-item span:last-child {
+  font-size: 12px;
+}
