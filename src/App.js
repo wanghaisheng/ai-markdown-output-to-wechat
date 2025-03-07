@@ -2,6 +2,10 @@ import React, {Component} from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import "codemirror/addon/search/searchcursor";
 import "codemirror/keymap/sublime";
+import "codemirror/addon/edit/closebrackets";
+import "codemirror/addon/edit/matchbrackets";
+import "codemirror/addon/hint/show-hint";
+import "codemirror/addon/hint/show-hint.css";
 import "antd/dist/antd.css";
 import {observer, inject} from "mobx-react";
 import classnames from "classnames";
@@ -300,48 +304,49 @@ class App extends Component {
     math.typesetRoot.setAttribute(MJX_DATA_FORMULA_TYPE, cls);
     math.typesetRoot = doc.adaptor.node(tag, {class: spanClass, style: "cursor:pointer"}, [math.typesetRoot]);
   }
-
   render() {
     const {previewType} = this.props.navbar;
     const {isEditAreaOpen, isPreviewAreaOpen, isStyleEditorOpen, isImmersiveEditing} = this.props.view;
     const {isSearchOpen} = this.props.dialog;
-
+    const {isMobileDevice} = this.props.view;
     const parseHtml = markdownParser.render(this.props.content.content);
-
-    const mdEditingClass = classnames({
-      "nice-md-editing": !isImmersiveEditing,
-      "nice-md-editing-immersive": isImmersiveEditing,
-      "nice-md-editing-hide": !isEditAreaOpen,
-    });
-
-    const styleEditingClass = classnames({
-      "nice-style-editing": true,
-      "nice-style-editing-hide": isImmersiveEditing,
-    });
-
-    const richTextClass = classnames({
-      "nice-marked-text": true,
-      "nice-marked-text-pc": previewType === "pc",
-      "nice-marked-text-hide": isImmersiveEditing || !isPreviewAreaOpen,
-    });
-
-    const richTextBoxClass = classnames({
-      "nice-wx-box": true,
-      "nice-wx-box-pc": previewType === "pc",
-    });
-
-    const textContainerClass = classnames({
-      "nice-text-container": !isImmersiveEditing,
-      "nice-text-container-immersive": isImmersiveEditing,
-    });
+    // Consolidated class declarations
+    const containerClasses = {
+      app: classnames({
+        "nice-mobile-container": isMobileDevice,
+      }),
+      textContainer: classnames({
+        "nice-text-container": !isImmersiveEditing && !isMobileDevice,
+        "nice-text-container-immersive": isImmersiveEditing && !isMobileDevice,
+        "nice-text-container-mobile": isMobileDevice,
+      }),
+      mdEditing: classnames({
+        "nice-md-editing": !isImmersiveEditing,
+        "nice-md-editing-immersive": isImmersiveEditing,
+        "nice-md-editing-hide": !isEditAreaOpen,
+      }),
+      styleEditing: classnames({
+        "nice-style-editing": true,
+        "nice-style-editing-hide": isImmersiveEditing,
+      }),
+      richText: classnames({
+        "nice-marked-text": true,
+        "nice-marked-text-pc": previewType === "pc",
+        "nice-marked-text-hide": isImmersiveEditing || !isPreviewAreaOpen,
+      }),
+      richTextBox: classnames({
+        "nice-wx-box": true,
+        "nice-wx-box-pc": previewType === "pc",
+      }),
+    };
 
     return (
       <appContext.Consumer>
         {({defaultTitle, onStyleChange, onStyleBlur, onStyleFocus, token}) => (
           <div className="nice-app">
             <Navbar title={defaultTitle} token={token} />
-            <div className={textContainerClass}>
-              <div id="nice-md-editor" className={mdEditingClass} onMouseOver={(e) => this.setCurrentIndex(1, e)}>
+            <div className={containerClasses.textContainer}>
+              <div id="nice-md-editor" className={containerClasses.mdEditing} onMouseOver={(e) => this.setCurrentIndex(1, e)}>
                 {isSearchOpen && <SearchBox />}
                 <CodeMirror
                   value={this.props.content.content}
@@ -366,11 +371,11 @@ class App extends Component {
                   ref={this.getInstance}
                 />
               </div>
-              <div id="nice-rich-text" className={richTextClass} onMouseOver={(e) => this.setCurrentIndex(2, e)}>
+              <div id="nice-rich-text" className={containerClasses.richText} onMouseOver={(e) => this.setCurrentIndex(2, e)}>
                 <Sidebar />
                 <div
                   id={BOX_ID}
-                  className={richTextBoxClass}
+                  className={containerClasses.richTextBox}
                   onScroll={this.handleScroll}
                   ref={(node) => {
                     this.previewContainer = node;
@@ -391,7 +396,7 @@ class App extends Component {
               </div>
 
               {isStyleEditorOpen && (
-                <div id="nice-style-editor" className={styleEditingClass}>
+                <div id="nice-style-editor" className={containerClasses.styleEditing}>
                   <StyleEditor onStyleChange={onStyleChange} onStyleBlur={onStyleBlur} onStyleFocus={onStyleFocus} />
                 </div>
               )}
